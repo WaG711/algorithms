@@ -1,5 +1,6 @@
 ﻿using algorithms.mission1;
 using algorithms.mission2;
+using algorithms.mission3;
 
 namespace algorithms
 {
@@ -32,8 +33,21 @@ namespace algorithms
 
             Console.WriteLine(CyclicShift.FindMinRightShift(s, t, onStep: SearchVisualizer.Draw));
             ///*/
+
+            /*/// mission 3
+            //string sequence = Console.ReadLine()!;
+            //Console.WriteLine(BracketSequence.FindMinDeletions(sequence, onStep: SequenceVisualizer.Draw));
+            int n = int.Parse(Console.ReadLine()!);
+            var numbers = Console.ReadLine()!
+                .Split(' ', StringSplitOptions.RemoveEmptyEntries)
+                .Select(int.Parse)
+                .ToArray();
+
+            var result = NextSmallerElement.FindIndices(numbers, onStep: SequenceVisualizer.Draw);
+            Console.WriteLine(string.Join(" ", result));
+            ///*/
             
-            /// mission 3
+            /// mission 4
             
         }
     }
