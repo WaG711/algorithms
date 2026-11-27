@@ -1,6 +1,7 @@
 ﻿using algorithms.mission1;
 using algorithms.mission2;
 using algorithms.mission3;
+using algorithms.mission4;
 
 namespace algorithms
 {
@@ -46,8 +47,27 @@ namespace algorithms
             var result = NextSmallerElement.FindIndices(numbers, onStep: SequenceVisualizer.Draw);
             Console.WriteLine(string.Join(" ", result));
             ///*/
+
+            /*/// mission 4
+            var numbers = Console.ReadLine()!
+                .Split(' ', StringSplitOptions.RemoveEmptyEntries)
+                .Select(int.Parse)
+                .TakeWhile(x => x != 0);
+
+            var tree = new BinarySearchTree<int>();
+
+            foreach (var number in numbers)
+            {
+                tree.Insert(number, onStep: TreeVisualizer.Draw);
+            }
+
+            //var branches = tree.GetBranches(onStep: TreeVisualizer.Draw);
+            //Console.WriteLine(string.Join(" ", branches));
+
+            Console.WriteLine(tree.IsBalanced(onStep: TreeVisualizer.Draw) ? "YES" : "NO");
+            ///*/
             
-            /// mission 4
+            /// mission 5
             
         }
     }
