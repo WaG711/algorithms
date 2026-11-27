@@ -41,7 +41,7 @@ public class BinarySearchTree<T>
 
         GetBranches(node.Left, result, onStep);
 
-        bool hasOneChild = (node.Left == null) ^ (node.Right == null);
+        var hasOneChild = (node.Left == null) ^ (node.Right == null);
 
         if (hasOneChild)
         {
@@ -60,7 +60,7 @@ public class BinarySearchTree<T>
             return new TreeNode<T>(value);
         }
 
-        int comparison = comparer.Compare(value, node.Value);
+        var comparison = comparer.Compare(value, node.Value);
 
         if (comparison < 0)
         {
@@ -81,21 +81,21 @@ public class BinarySearchTree<T>
             return 0;
         }
 
-        int leftHeight = GetHeight(node.Left, onStep);
+        var leftHeight = GetHeight(node.Left, onStep);
 
         if (leftHeight == -1)
         {
             return -1;
         }
 
-        int rightHeight = GetHeight(node.Right, onStep);
+        var rightHeight = GetHeight(node.Right, onStep);
 
         if (rightHeight == -1)
         {
             return -1;
         }
 
-        bool isBalanced = Math.Abs(leftHeight - rightHeight) <= 1;
+        var isBalanced = Math.Abs(leftHeight - rightHeight) <= 1;
 
         onStep?.Invoke(new TreeStep<T>(Root, node, isBalanced, leftHeight, rightHeight));
 

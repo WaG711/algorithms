@@ -7,14 +7,13 @@ public static class SubstringSearch
         var result = new List<int>();
         var prefix = BuildPrefixFunction(pattern);
 
-        int j = 0;
+        var j = 0;
 
         for (int i = 0; i < text.Length; i++)
         {
             while (j > 0 && text[i] != pattern[j])
             {
                 onStep?.Invoke(new SearchStep(text, pattern, i, j));
-
                 j = prefix[j - 1];
             }
 
@@ -42,7 +41,7 @@ public static class SubstringSearch
 
         for (int i = 1; i < pattern.Length; i++)
         {
-            int j = prefix[i - 1];
+            var j = prefix[i - 1];
 
             while (j > 0 && pattern[i] != pattern[j])
             {

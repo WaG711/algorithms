@@ -20,7 +20,7 @@ public static class QuickSort
             return;
         }
 
-        int partition = Partition(items, left, right, comparer, onStep);
+        var partition = Partition(items, left, right, comparer, onStep);
 
         Sort(items, left, partition, comparer, onStep);
         Sort(items, partition + 1, right, comparer, onStep);
@@ -30,8 +30,8 @@ public static class QuickSort
     {
         T pivot = MedianOfThree(items, left, right, comparer);
 
-        int i = left - 1;
-        int j = right + 1;
+        var i = left - 1;
+        var j = right + 1;
 
         onStep?.Invoke(new SortStep<T>(items, Enumerable.Range(left, right - left + 1).ToArray()));
 
@@ -62,7 +62,7 @@ public static class QuickSort
 
     private static T MedianOfThree<T>(IList<T> items, int left, int right, IComparer<T> comparer)
     {
-        int middle = left + (right - left) / 2;
+        var middle = left + (right - left) / 2;
 
         T a = items[left];
         T b = items[middle];

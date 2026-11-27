@@ -15,7 +15,7 @@ public static class SequenceVisualizer
     {
         Console.Clear();
 
-        int width = Math.Max(4, step.Items.Select(x => x?.ToString()?.Length ?? 0)
+        var width = Math.Max(4, step.Items.Select(x => x?.ToString()?.Length ?? 0)
             .DefaultIfEmpty(0)
             .Max() + 2);
 
@@ -70,9 +70,9 @@ public static class SequenceVisualizer
 
     private static string Center(string value, int width)
     {
-        int padding = Math.Max(0, width - value.Length);
-        int left = padding / 2;
-        int right = padding - left;
+        var padding = Math.Max(0, width - value.Length);
+        var left = padding / 2;
+        var right = padding - left;
 
         return new string(' ', left) + value + new string(' ', right);
     }

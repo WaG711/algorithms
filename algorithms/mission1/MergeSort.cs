@@ -8,16 +8,16 @@ public static class MergeSort
 
         comparer ??= Comparer<T>.Default;
 
-        int count = items.Count;
+        var count = items.Count;
         var buffer = new T[count];
 
         for (long width = 1; width < count; width *= 2)
         {
             for (long start = 0; start < count; start += 2 * width)
             {
-                int left = (int)start;
-                int middle = (int)Math.Min(start + width, count);
-                int right = (int)Math.Min(start + 2 * width, count);
+                var left = (int)start;
+                var middle = (int)Math.Min(start + width, count);
+                var right = (int)Math.Min(start + 2 * width, count);
 
                 if (middle == right)
                 {
@@ -33,9 +33,9 @@ public static class MergeSort
 
     private static void Merge<T>(IList<T> items, T[] buffer, int left, int middle, int right, IComparer<T> comparer, Action<SortStep<T>>? onStep)
     {
-        int i = left;
-        int j = middle;
-        int k = left;
+        var i = left;
+        var j = middle;
+        var k = left;
 
         var highlightedIndices = Enumerable
             .Range(left, right - left)

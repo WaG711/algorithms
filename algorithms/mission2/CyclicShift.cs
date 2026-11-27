@@ -14,15 +14,15 @@ public static class CyclicShift
             return 0;
         }
 
-        int n = s.Length;
+        var n = s.Length;
 
         var indices = SubstringSearch.KmpSearch(s + s, t, onStep);
 
-        int minShift = int.MaxValue;
+        var minShift = int.MaxValue;
 
         foreach (int index in indices)
         {
-            int shift = (n - index) % n;
+            var shift = (n - index) % n;
             minShift = Math.Min(minShift, shift);
         }
 

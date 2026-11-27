@@ -10,9 +10,9 @@ public static class BubbleSort
 
         comparer ??= Comparer<T>.Default;
 
-        int count = items.Count;
-        int gap = count;
-        bool swapped = true;
+        var count = items.Count;
+        var gap = count;
+        var swapped = true;
 
         while (gap > 1 || swapped)
         {

@@ -31,7 +31,7 @@ public static class SortVisualizer
 
                 decimal value = decimal.CreateChecked(step.Items[i]);
 
-                int scaledHeight = maxValue != minValue
+                var scaledHeight = maxValue != minValue
                     ? 1 + (int)Math.Round(
                         (value - minValue)
                         / (maxValue - minValue)
@@ -75,9 +75,9 @@ public static class SortVisualizer
 
     private static string Center(string value, int width)
     {
-        int padding = Math.Max(0, width - value.Length);
-        int left = padding / 2;
-        int right = padding - left;
+        var padding = Math.Max(0, width - value.Length);
+        var left = padding / 2;
+        var right = padding - left;
 
         return new string(' ', left) + value + new string(' ', right);
     }

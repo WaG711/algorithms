@@ -14,7 +14,7 @@ public static class SearchVisualizer
     {
         Console.Clear();
 
-        int start = step.TextIndex - step.PatternIndex;
+        var start = step.TextIndex - step.PatternIndex;
 
         for (int i = 0; i < step.Text.Length; i++)
         {
@@ -68,7 +68,7 @@ public static class SearchVisualizer
                 : ConsoleColor.Red;
         }
 
-        int start = step.TextIndex - step.PatternIndex;
+        var start = step.TextIndex - step.PatternIndex;
 
         if (index >= start && index < step.TextIndex)
         {
