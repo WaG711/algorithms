@@ -1,4 +1,5 @@
 ﻿using algorithms.mission1;
+using algorithms.mission2;
 
 namespace algorithms
 {
@@ -14,17 +15,26 @@ namespace algorithms
                 .ToArray();
 
             var expected = numbers.OrderBy(x => x).ToArray();
-            *//*numbers.CombCocktailSort(onStep: SortVisualizer.Draw);*/
-            /*numbers.BottomUpSort(onStep: SortVisualizer.Draw);*//*
+            //numbers.CombCocktailSort(onStep: SortVisualizer.Draw);
+            //numbers.BottomUpSort(onStep: SortVisualizer.Draw);
             numbers.HoareSort(onStep: SortVisualizer.Draw);
 
             bool isCorrect = numbers.SequenceEqual(expected);
             Console.WriteLine(isCorrect);
             ///*/
-            
-            /// mission 2
-            
 
+            /*/// mission 2
+            string s = Console.ReadLine()!;
+            string t = Console.ReadLine()!;
+
+            //var result = SubstringSearch.KmpSearch(s, t, onStep: SearchVisualizer.Draw);
+            //Console.WriteLine(string.Join(" ", result));
+
+            Console.WriteLine(CyclicShift.FindMinRightShift(s, t, onStep: SearchVisualizer.Draw));
+            ///*/
+            
+            /// mission 3
+            
         }
     }
 }
